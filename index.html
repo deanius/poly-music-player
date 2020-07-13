@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Polyrhythm Ping-Pong</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .player {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+      }
+      .ani-track {
+        display: block;
+        position: relative;
+        font-size: 4rem;
+        border-radius: 3px;
+        border: 1px outset black;
+        box-shadow: 0.3rem 0.3rem 0.25rem #ddd;
+        width: 260px;
+        overflow-x: hidden;
+        animation: playin 2s 1s linear;
+        animation-fill-mode: both;
+      }
+      .grid {
+        background-color: #eee;
+        border: 1px outset #ddd;
+        width: 100%;
+        text-align: center;
+      }
+
+      @keyframes playin {
+        0% {
+          left: 50%;
+        }
+        100% {
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="player">
+      <div class="grid">|</div>
+      <div id="ball" class="ani-track">🎵🎶🎵🎶️</div>
+    </div>
+
+    <script src="src/index.ts"></script>
+  </body>
+</html>
